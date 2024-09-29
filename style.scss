@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+$Purple_100: hsl(254, 88%, 90%);
+$Purple_500: hsl(256, 67%, 59%);
+$Yellow_100: hsl(31, 66%, 93%);
+$Yellow_500: hsl(39, 100%, 71%);
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 7%);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+body{
+    min-height: 100vh;
+    background-color: hsl(255, 100%, 96%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    padding: 1rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: 
+    'item1 item1 item2 item2 item2 item2 item3 item3'
+    'item1 item1 item2 item2 item2 item2 item3 item3'
+    'item1 item1 item2 item2 item2 item2 item3 item3'
+    'item1 item1 item2 item2 item2 item2 item3 item3'
+    'item1 item1 item5 item5 item6 item6 item3 item3'
+    'item4 item4 item5 item5 item6 item6 item3 item3'
+    'item4 item4 item5 item5 item6 item6 item3 item3'
+    'item4 item4 item7 item7 item8 item8 item8 item8'
+    'item4 item4 item7 item7 item8 item8 item8 item8'
+    'item4 item4 item7 item7 item8 item8 item8 item8'
+    ;
+    
+    gap: 1rem;
+    width: 800px;
+    height: 95vh;
+
+    .item{
+        border-radius: .5rem;
+        overflow: hidden;
+    }
+
+    .item1{
+        grid-area: item1;
+        padding: 3rem 1.5rem 0 1.5rem;
+        background-color: $Yellow_100;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 26px;
+        letter-spacing: -2px;
+
+        i{
+            color: $Purple_500;
+        }
+
+        img{
+            margin-top: 1rem;
+        }
+    }
+
+    .item2{
+        grid-area: item2;
+        background-color: $Purple_500;
+        color: $White;
+        text-align: center;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            font-size: 2.4rem;
+            line-height: 2.5rem;
+
+            span{
+                color: $Yellow_500;
+            }
+        }
+
+        img{
+            width: 9rem;
+            margin: 1rem 0 .5rem;
+        }
+
+        div{
+            font-size: .8rem;
+            font-weight: 400;
+        }
+    }
+
+    .item3{
+        grid-area: item3;
+        background-color: $Purple_100;
+        padding: 2rem 0 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+
+        div{
+            font-weight: 500;
+            font-size: 1.5rem;
+            line-height: 22px;
+            letter-spacing: -2px;
+        }
+
+        img{
+            height: 410px;
+            object-fit: cover;
+            object-position: left; 
+        }
+
+        p{
+            font-size: .9rem;
+            line-height: 1.1rem;
+        }
+    }
+
+    .item4{
+        grid-area: item4;
+        background-color: $Yellow_500;
+        padding: 1.5rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 26px;
+        letter-spacing: -2px;
+
+        p{
+            margin-bottom: 2rem;
+        }
+    }
+
+    .item5{
+        grid-area: item5;
+        background-color: $White;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1rem;
+        padding: 1.1rem;
+
+        img{
+            position: relative;
+            width: 14rem;
+        }
+
+        p{
+            margin-top: 1rem;
+        }
+    }
+
+    .item6{
+        grid-area: item6;
+        background-color: $Yellow_500;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.1rem;
+        padding: 1.2rem;
+
+        p{
+            margin-bottom: 1rem;
+        }
+
+        img{
+            position: relative;
+        }
+    }
+
+    .item7{
+        grid-area: item7;
+        background-color: $White;
+        padding: .4rem 1rem;
+
+        span{
+            font-size: 3rem;
+            font-weight: 500;
+        }
+
+        p{
+            font-size: .9rem;
+            margin-top: -.5rem;
+        }
+
+        img{
+            width: 85%;
+            margin-top: 1rem;
+        }
+    }
+
+    .item8{
+        grid-area: item8;
+        background-color: $Purple_500;
+        padding: 1rem;
+        color: $White;
+        display: grid;
+        grid-template-columns: 1.7fr 2fr;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px){
+    .container{
+        .item7{
+            padding: .4rem .5rem;
+
+            span{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px){
+    body{
+        height: auto;
+        overflow-y: auto;
+        padding: 1rem 1.5rem;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 14rem 8rem 12.5rem 26rem 
+        21rem 11rem 12rem 19rem;
+        grid-template-areas: 
+        'item2'
+        'item5'
+        'item6'
+        'item3'
+        'item8'
+        'item7'
+        'item1'
+        'item4';
+        height: auto;
+
+        .item2{
+            height: 14rem;
+            padding: 0 1.5rem;
+        }
+
+        .item5{
+            height: 8rem;
+        }
+
+        .item6{
+            height: 12.5rem;
+            padding: 1rem;
+            font-size: 1.4rem;
+
+            img{
+                width: 70%;
+            }
+        }
+
+        .item3{
+            align-items: center;
+            padding: 1.5rem;
+            height: 26rem;
+            text-align: center;
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                object-position: center; 
+            }
+
+            p{
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+
+        .item8{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            height: 21rem;
+
+            img{
+                width: 75%;
+            }
+
+            p{
+                padding: 0 3rem;
+            }
+        }
+
+        .item7{
+            padding: .5rem 1rem;
+            height: 11rem;
+            
+            img{
+                width: 55%;
+            }
+        }
+
+        .item1{
+            padding: 1.5rem;
+            height: 12rem;
+
+            img{
+                width: 60%;
+            }
+        }
+
+        .item4{
+            padding-right: 2rem;
+            height: 19rem;
+
+            p{
+                margin-bottom: 1rem;
+            }
+
+            img{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px){
+    body{
+        height: auto;
+        overflow-y: auto;
+        padding: 1rem 1.5rem;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 14rem 8rem 11rem 24rem 
+        18rem 10rem 12rem 17rem;
+        grid-template-areas: 
+        'item2'
+        'item5'
+        'item6'
+        'item3'
+        'item8'
+        'item7'
+        'item1'
+        'item4';
+        height: auto;
+
+        .item2{
+            height: 14rem;
+            padding: 0 1.5rem;
+
+            p{
+            font-size: 2rem;
+            }
+        }
+
+        .item5{
+            font-size: 1.2rem;
+            padding: 1rem;
+            height: 8rem;
+        }
+
+        .item6{
+            height: 11rem;
+            padding: 1rem;
+            font-size: 1.2rem;
+
+            img{
+                width: 70%;
+            }
+        }
+
+        .item3{
+            align-items: center;
+            padding: 1.5rem 1rem;
+            height: 24rem;
+            text-align: center;
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                object-position: center; 
+            }
+
+            p{
+                font-size: 1rem;
+                padding: 0;
+            }
+        }
+
+        .item8{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            height: 18rem;
+
+            img{
+                width: 75%;
+            }
+
+            p{
+                padding: 0 2rem;
+            }
+        }
+
+        .item7{
+            padding: .5rem 1rem;
+            height: 10rem;
+            
+            img{
+                width: 55%;
+            }
+        }
+
+        .item1{
+            padding: 1.5rem;
+            height: 12rem;
+
+            img{
+                width: 60%;
+            }
+        }
+
+        .item4{
+            padding-right: 2rem;
+            height: 17rem;
+
+            p{
+                margin-bottom: 1rem;
+            }
+
+            img{
+                width: 70%;
+            }
+        }
+    }
+}
